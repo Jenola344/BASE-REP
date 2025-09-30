@@ -124,3 +124,11 @@ BaseRep Score =
   (Governance × 0.15) +
   (Social × 0.10) +
   (Consistency × 0.10)
+
+  📊 Use Cases & Applications
+🎨 For Creators
+solidity
+// Creator reputation building
+engagement.dailyCheckIn(creator);
+achievementNFT.mintAchievement(creator, "content_creator", tier);
+gratuity.distributeTip(supporter, creator, amount);
