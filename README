@@ -62,3 +62,9 @@ GovernancePolls.sol	Community decision making	- Weighted voting
 TemporalVault.sol	Time-based commitments	- Vesting schedules
 - Time-locked content
 - Commitment tracking
+
+🚀 Quick Start
+Prerequisites
+bash
+# Install dependencies
+npm install @openzeppelin/contracts @nomiclabs/hardhat-ethers ethers
