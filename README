@@ -139,3 +139,9 @@ solidity
 bountySystem.createBounty("Fix Bug #123", rewardAmount);
 contributionLedger.recordContribution(developer, "code_contribution");
 achievementNFT.mintAchievement(developer, "bug_hunter", 1);
+
+👥 For Communities
+solidity
+// Community governance
+governancePolls.createProposal("Fund Community Project", details);
+temporalVault.lockTokens(member, amount, unlockTime);
