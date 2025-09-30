@@ -41,3 +41,15 @@ EngagementTracker.sol	User activity monitoring	- Daily check-ins
 ContributionLedger.sol	Transparent contribution tracking	- Verifiable work history
 - Multi-type contributions
 - Community validation
+
+💰 Economic Layer
+Contract	Purpose	Key Features
+TokenDistributionEngine.sol	Fair token distribution	- Merit-based airdrops
+- Vesting schedules
+- Multi-recipient support
+GratuityDistribution.sol	Micro-payment system	- Direct supporter payments
+- Split distributions
+- Transparent fee structure
+BountyManagementSystem.sol	Task and bounty platform	- Escrowed payments
+- Multi-party verification
+- Automated payout
