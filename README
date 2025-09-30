@@ -102,3 +102,16 @@ contract MyBaseDApp {
         achievementNFT.mintAchievement(user, "quest_champion", 1);
     }
 }
+
+🎯 BaseRep Score System
+The core of BaseRep is the universal reputation score:
+
+solidity
+struct BaseRepScore {
+    uint256 engagement;      // From daily activities and consistency
+    uint256 achievements;    // NFT-based accomplishment points
+    uint256 contributions;   // Verified work and contributions
+    uint256 governance;      // Participation in community decisions
+    uint256 social;          // Tips received and community recognition
+    uint256 consistency;     // Long-term participation metrics
+}
