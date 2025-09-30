@@ -115,3 +115,12 @@ struct BaseRepScore {
     uint256 social;          // Tips received and community recognition
     uint256 consistency;     // Long-term participation metrics
 }
+Score Calculation
+text
+BaseRep Score = 
+  (Engagement × 0.25) +
+  (Achievements × 0.20) + 
+  (Contributions × 0.20) +
+  (Governance × 0.15) +
+  (Social × 0.10) +
+  (Consistency × 0.10)
