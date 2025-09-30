@@ -29,3 +29,15 @@ BaseRep solves this by creating a universal reputation layer that works across a
 
 
 
+📦 Smart Contract Suite
+🎯 Core Reputation Contracts
+Contract	Purpose	Key Features
+AchievementToken.sol	NFT-based achievement system	- Soulbound achievements
+- Tiered reward system
+- Cross-dApp compatibility
+EngagementTracker.sol	User activity monitoring	- Daily check-ins
+- Streak tracking
+- Engagement scoring
+ContributionLedger.sol	Transparent contribution tracking	- Verifiable work history
+- Multi-type contributions
+- Community validation
