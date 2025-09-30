@@ -145,3 +145,32 @@ solidity
 // Community governance
 governancePolls.createProposal("Fund Community Project", details);
 temporalVault.lockTokens(member, amount, unlockTime);
+
+🔧 Integration Guide
+For dApp Developers
+Import BaseRep Contracts
+
+bash
+npm install @baserep/contracts
+Initialize Reputation System
+
+solidity
+// In your dApp constructor
+BaseRepIntegration public baseRep;
+
+constructor(address _baseRepRegistry) {
+    baseRep = BaseRepIntegration(_baseRepRegistry);
+}
+Track User Actions
+
+solidity
+function userAction(address user) external {
+    // Record engagement
+    baseRep.recordEngagement(user, "custom_action");
+    
+    // Check user reputation for gated features
+    if (baseRep.getReputationScore(user) > MIN_SCORE) {
+        // Grant access to premium features
+        grantPremiumAccess(user);
+    }
+}
