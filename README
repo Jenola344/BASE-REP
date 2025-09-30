@@ -174,3 +174,16 @@ function userAction(address user) external {
         grantPremiumAccess(user);
     }
 }
+
+For Users
+Build Your Reputation
+
+bash
+# Daily engagement
+npx baserep check-in
+
+# Complete bounties
+npx baserep bounty complete <bounty_id>
+
+# Participate in governance
+npx baserep vote <proposal_id> <choice>
