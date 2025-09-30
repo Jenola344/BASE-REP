@@ -132,3 +132,10 @@ solidity
 engagement.dailyCheckIn(creator);
 achievementNFT.mintAchievement(creator, "content_creator", tier);
 gratuity.distributeTip(supporter, creator, amount);
+
+💻 For Developers
+solidity
+// Developer credential system
+bountySystem.createBounty("Fix Bug #123", rewardAmount);
+contributionLedger.recordContribution(developer, "code_contribution");
+achievementNFT.mintAchievement(developer, "bug_hunter", 1);
