@@ -53,3 +53,12 @@ GratuityDistribution.sol	Micro-payment system	- Direct supporter payments
 BountyManagementSystem.sol	Task and bounty platform	- Escrowed payments
 - Multi-party verification
 - Automated payout
+
+🗳️ Governance & Community
+Contract	Purpose	Key Features
+GovernancePolls.sol	Community decision making	- Weighted voting
+- Time-locked proposals
+- Transparent results
+TemporalVault.sol	Time-based commitments	- Vesting schedules
+- Time-locked content
+- Commitment tracking
