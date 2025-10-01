@@ -1,17 +1,28 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
-import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
-import "@openzeppelin/contracts/access/Ownable.sol";
+import "@openzeppelin/contracts/token/ERC20/IERC20.sol";
 
-contract BaseERC20Token is ERC20, Ownable {
-    constructor(string memory name_, string memory symbol_, uint256 initialSupply)
-        ERC20(name_, symbol_) Ownable(msg.sender)
-    {
-        _mint(msg.sender, initialSupply);
+contract TokenDistributionEngine {
+    event Distributed(address indexed token, uint256 recipients, uint256 totalAmount);
+
+    // Sender must approve this contract to spend tokens before calling.
+    function tokenEqual(address token, address[] calldata recipients, uint256 amountEach) external {
+        require(amountEach > 0 && recipients.length > 0, "Invalid params");
+        uint256 total = amountEach * recipients.length;
+        for (uint256 i = 0; i < recipients.length; i++) {
+            require(IERC20(token).transferFrom(msg.sender, recipients[i], amountEach), "transfer fail");
+        }
+        emit Distributed(token, recipients.length, total);
     }
 
-    function mint(address to, uint256 amount) external onlyOwner {
-        _mint(to, amount);
+    function tokenAmounts(address token, address[] calldata recipients, uint256[] calldata amounts) external {
+        require(recipients.length == amounts.length && recipients.length > 0, "Length mismatch");
+        uint256 total;
+        for (uint256 i = 0; i < recipients.length; i++) {
+            total += amounts[i];
+            require(IERC20(token).transferFrom(msg.sender, recipients[i], amounts[i]), "transfer fail");
+        }
+        emit Distributed(token, recipients.length, total);
     }
 }
