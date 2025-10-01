@@ -1,7 +1,4 @@
 🎯 Token Management
-BaseERC20Token.sol (formerly SimpleToken.sol)
-
-BaseERC20Token_Flat.sol (formerly SimpleToken_flattened.sol)
 
 TokenDistributionEngine.sol (formerly Airdropper.sol)
 
